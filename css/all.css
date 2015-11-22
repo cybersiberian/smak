@@ -26,6 +26,9 @@ $caret-width-large:         5px !default; */
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   font-family: 'oswald-bold';
+  text-align: center;
+  line-height: 1.42;
+  line-height: 1.1;
 }
 
 h1 {
@@ -45,11 +48,74 @@ h4 {
   font-family: 'oswald-regular';
 }
 
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  margin-top: 22px;
+  margin-bottom: 11px;
+}
+
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 11px;
+  margin-bottom: 11px;
+}
+
+p {
+  margin: 0 0 11px;
+}
+
+.lead {
+  margin-bottom: 22px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+  .lead {
+    font-size: 24px;
+  }
+}
+
 p, a {
   font-size: 16px;
   font-family: 'oswald-regular';
   text-decoration: none;
   color: inherit;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
 }
 
 .text-base {
@@ -66,6 +132,69 @@ p, a {
 
 .text-holder-dark {
   background: #131316;
+}
+
+hr {
+  text-align: center;
+  background: #ffe600;
+  height: 2px;
+  width: 171px;
+  border: none;
+}
+
+blockquote {
+  padding: 11px 22px;
+  margin: 0 0 22px;
+  font-size: 20px;
+  border-left: 5px solid #707070;
+}
+
+blockquote p:last-child,
+blockquote ul:last-child,
+blockquote ol:last-child {
+  margin-bottom: 0;
+}
+
+blockquote footer,
+blockquote small,
+blockquote .small {
+  display: block;
+  font-size: 80%;
+  line-height: 1.42;
+  color: #515151;
+}
+
+blockquote footer:before,
+blockquote small:before,
+blockquote .small:before {
+  content: '\2014 \00A0';
+}
+
+.blockquote-reverse,
+blockquote.pull-right {
+  padding-right: 15px;
+  padding-left: 0;
+  border-right: 5px solid #707070;
+  border-left: 0;
+  text-align: right;
+}
+
+.blockquote-reverse footer:before,
+.blockquote-reverse small:before,
+.blockquote-reverse .small:before,
+blockquote.pull-right footer:before,
+blockquote.pull-right small:before,
+blockquote.pull-right .small:before {
+  content: '';
+}
+
+.blockquote-reverse footer:after,
+.blockquote-reverse small:after,
+.blockquote-reverse .small:after,
+blockquote.pull-right footer:after,
+blockquote.pull-right small:after,
+blockquote.pull-right .small:after {
+  content: '\00A0 \2014';
 }
 
 @font-face {
