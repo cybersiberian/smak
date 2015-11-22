@@ -105,7 +105,7 @@
 	display: inline-block;
 	padding: 0.8em;
 	color: $yellow;
-	border: 1px solid transparent;
+	border: 2px solid transparent;
 
 		.slim{
 		padding: 0 4px;
@@ -144,9 +144,10 @@
 .square-bg{
 	border-radius: 0!important;
 }
-.social{
+.social, .social>a{
 	color: $white;
 	border-color: $white;
+	font-size: $font-size-icons-xs;
 }
 
 // "icon-holder" for better visibility - do noy include in main html
@@ -176,8 +177,7 @@
 	&:hover,
 	&:active
 	{
-		border: 1px solid $yellow;
-		color: 1px solid $yellow;
+		border: 2px solid $yellow;
 	}
 }
 
@@ -186,7 +186,7 @@
 	border-radius: 50%;
 	color: $white!important;
 	border-color: inherit;
-	border: 1px solid;
+	border: 2px solid;
 
 	&:hover,
 	&:active{

@@ -23,6 +23,51 @@ $caret-width-large:         5px !default; */
   font-style: normal;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  font-family: 'oswald-bold';
+}
+
+h1 {
+  font-size: 64px;
+}
+
+h2 {
+  font-size: 29px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 16px;
+  font-family: 'oswald-regular';
+}
+
+p, a {
+  font-size: 16px;
+  font-family: 'oswald-regular';
+  text-decoration: none;
+  color: inherit;
+}
+
+.text-base {
+  color: #131316;
+}
+
+.text-inverse {
+  color: #ffffff;
+}
+
+.text-highlited {
+  color: #ffe600;
+}
+
+.text-holder-dark {
+  background: #131316;
+}
+
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon/icomoon.eot");
@@ -149,7 +194,7 @@ $caret-width-large:         5px !default; */
   display: inline-block;
   padding: 0.8em;
   color: #ffe600;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
 }
 
 .icon .slim {
@@ -179,9 +224,10 @@ $caret-width-large:         5px !default; */
   border-radius: 0 !important;
 }
 
-.social {
+.social, .social > a {
   color: #ffffff;
   border-color: #ffffff;
+  font-size: 10px;
 }
 
 .icon-holder {
@@ -203,8 +249,7 @@ $caret-width-large:         5px !default; */
 
 .bordered:hover,
 .bordered:active {
-  border: 1px solid #ffe600;
-  color: 1px solid #ffe600;
+  border: 2px solid #ffe600;
 }
 
 .filled {
@@ -212,7 +257,7 @@ $caret-width-large:         5px !default; */
   border-radius: 50%;
   color: #ffffff !important;
   border-color: inherit;
-  border: 1px solid;
+  border: 2px solid;
 }
 
 .filled:hover,
