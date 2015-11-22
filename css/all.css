@@ -221,3 +221,41 @@ $caret-width-large:         5px !default; */
   border-color: #131316 !important;
   color: #ffe600 !important;
 }
+
+.btn {
+  display: inline-block;
+  padding: 1em 2em;
+  background: #ffe600;
+  border: 2px solid #ffe600;
+  font-family: 'oswald-bold';
+  text-transform: uppercase;
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+  background-color: transparent;
+  border-color: #ffe600;
+  color: #131316;
+  outline: none;
+}
+
+.btn-xl {
+  font-size: 20px;
+}
+
+.btn-md {
+  font-size: 15px;
+}
+
+.btn-base {
+  color: #131316;
+}
+
+.btn-inverse {
+  color: #ffffff;
+}
+
+.btn-capital {
+  text-transform: capitalize;
+}
