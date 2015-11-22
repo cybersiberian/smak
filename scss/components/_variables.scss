@@ -27,7 +27,7 @@ $blue-light:			lighten(saturate(adjust-hue(#131a1d, -7.6552), 23.7821), 3.3333);
 $blue-lighter:			lighten(saturate(adjust-hue(#131a1d, -9.2195), 33.8333), 5.2941); // #11343a;
 $blue-lightest:			lighten(desaturate(adjust-hue(#131a1d, -21.7500), 8.5256), 16.0784);// #394948;
 
-$yellow:				#394948;
+$yellow:				#ffe600;
 
 $white:					#ffffff;
 $gray-lightest:         darken(saturate(adjust-hue(#ffffff, 0.0000), 0.0000), 1.5686); //#fbfbfb;
@@ -49,6 +49,11 @@ $font-family-base:        $font-family-sans-serif !default;
 $font-size-base:          16px !default;
 $font-size-large:         ceil(($font-size-base * 1.25)); // 20px
 $font-size-small:         ceil(($font-size-base * 0.935)); //15px
+$font-size-icons-lg:	ceil(($font-size-base * 2.75)); //44px
+$font-size-icons-md:	ceil(($font-size-base * 2.125)); //34px
+$font-size-icons-sm:	ceil(($font-size-base * 1.25)); //20px
+$font-size-icons-xs:	ceil(($font-size-base * 0.625)); //10px
+
 
 $font-size-h1:            floor(($font-size-base * 4.06)); // 65px
 $font-size-h2:            floor(($font-size-base * 1.87)); // 30px

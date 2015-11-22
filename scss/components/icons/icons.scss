@@ -22,9 +22,6 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-.icon{
-	color: red;
-}
 
 .icon-analyse:before {
 	content: "\e900";
@@ -101,3 +98,115 @@
 .icon-work:before {
 	content: "\e918";
 }
+
+/* ICONS BASIC */
+
+.icon{
+	display: inline-block;
+	padding: 0.8em;
+	color: $yellow;
+	border: 1px solid transparent;
+
+		.slim{
+		padding: 0 4px;
+	}
+
+
+}
+
+
+/* ICONS Primary*/
+
+.icon-primary{
+	font-size: $font-size-icons-lg;
+}
+
+/* ICONS Secondary*/
+
+.icon-secondary{
+	font-size: $font-size-icons-md;
+
+}
+
+.icon-base{
+	font-size: $font-size-icons-sm;
+
+}
+
+.icon-small{
+	font-size: $font-size-icons-xs;
+
+
+}
+
+
+/* ICONS Square border*/
+.square-bg{
+	border-radius: 0!important;
+}
+.social{
+	color: $white;
+	border-color: $white;
+}
+
+// "icon-holder" for better visibility - do noy include in main html
+.icon-holder{
+	background: black;
+	padding: 10px;
+}
+
+
+
+
+// HOVER ACTIVE
+
+.simple{
+	background: transparent;
+	border-color: transparent;
+	border-radius: 50%;
+
+	&:hover,
+	&:active{
+		background: transparent;
+		border-color: $yellow ;
+	}
+}
+
+.bordered{
+	&:hover,
+	&:active
+	{
+		border: 1px solid $yellow;
+		color: 1px solid $yellow;
+	}
+}
+
+.filled{
+	background: $yellow;
+	border-radius: 50%;
+	color: $white!important;
+	border-color: inherit;
+	border: 1px solid;
+
+	&:hover,
+	&:active{
+		background: transparent;
+		border-color: $darkest-blue!important;
+		color: $yellow!important;
+
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

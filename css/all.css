@@ -44,10 +44,6 @@ $caret-width-large:         5px !default; */
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon {
-  color: red;
-}
-
 .icon-analyse:before {
   content: "\e900";
 }
@@ -146,4 +142,82 @@ $caret-width-large:         5px !default; */
 
 .icon-work:before {
   content: "\e918";
+}
+
+/* ICONS BASIC */
+.icon {
+  display: inline-block;
+  padding: 0.8em;
+  color: #ffe600;
+  border: 1px solid transparent;
+}
+
+.icon .slim {
+  padding: 0 4px;
+}
+
+/* ICONS Primary*/
+.icon-primary {
+  font-size: 44px;
+}
+
+/* ICONS Secondary*/
+.icon-secondary {
+  font-size: 34px;
+}
+
+.icon-base {
+  font-size: 20px;
+}
+
+.icon-small {
+  font-size: 10px;
+}
+
+/* ICONS Square border*/
+.square-bg {
+  border-radius: 0 !important;
+}
+
+.social {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.icon-holder {
+  background: black;
+  padding: 10px;
+}
+
+.simple {
+  background: transparent;
+  border-color: transparent;
+  border-radius: 50%;
+}
+
+.simple:hover,
+.simple:active {
+  background: transparent;
+  border-color: #ffe600;
+}
+
+.bordered:hover,
+.bordered:active {
+  border: 1px solid #ffe600;
+  color: 1px solid #ffe600;
+}
+
+.filled {
+  background: #ffe600;
+  border-radius: 50%;
+  color: #ffffff !important;
+  border-color: inherit;
+  border: 1px solid;
+}
+
+.filled:hover,
+.filled:active {
+  background: transparent;
+  border-color: #131316 !important;
+  color: #ffe600 !important;
 }
