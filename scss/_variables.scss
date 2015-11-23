@@ -1,3 +1,28 @@
+// Color
+
+$body-bg:                 		#fff;
+$text-color:              		#707070;
+
+$brand-primary:					#ffe600;
+$content-bg-light:				#11343a;
+$content-bg-dark:				#122a2f;
+$content-bg-darker:				#131a1d;
+
+$link-color:              		$brand-primary;
+$link-hover-color:        		darken($link-color, 15%);
+$link-hover-decoration:			underline;
+
+
+//Types
+
+$font-family-base:        		"Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-size-base:          		14px;
+$line-height-base:        		1.4;
+/* Я закинул базовые переменные, чтобы компилировался all.css. Как доберешься до типографики, повставляй нужные значения :) */
+
+//----------------------------------------------
+
+
 /*  Media queries breakpoints
 	Define the breakpoints at which your layout will change, adapting to different screen sizes. */
 

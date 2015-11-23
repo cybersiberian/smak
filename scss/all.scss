@@ -7,3 +7,11 @@
 @import 'core/grid-system';
 @import 'core/grid-framework';
 @import 'core/grid';
+
+//layouts
+@import 'components/layouts/header';
+
+// components
+@import 'components/navbar/nav';
+@import 'components/navbar/navbar';
+@import 'components/navbar/logo';
