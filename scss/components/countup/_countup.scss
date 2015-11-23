@@ -1,0 +1,16 @@
+.countup {
+	&-content {
+		padding: 60px 0;
+		background-color: $content-bg-dark;
+	}
+
+	&-item {
+		border: 1px solid $brand-primary;
+		padding: 35px 0;
+	}
+	&-caption,
+	&-quantity {
+		display: block;
+		text-align: center;
+	}
+}

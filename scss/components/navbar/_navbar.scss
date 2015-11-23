@@ -1,10 +1,11 @@
 // All variables contains in file 'variables'
 
 $navbar-height:                 50px;
-$navbar-margin-bottom:          10px;
-$navbar-collapse-max-height:    340px;
+$navbar-margin-bottom:          0;
+// $navbar-collapse-max-height:    340px;
 $navbar-padding-horizontal:     15px;
 $navbar-padding-vertical:       15px;
+
 /*  Navbar vertical align
     Vertically center elements in the navbar.
     Example: an element has a height of 30px, so write out `.navbar-vertical-align(30px);` to calculate the appropriate top margin.
@@ -42,7 +43,6 @@ $navbar-padding-vertical:       15px;
   }
 }
 
-
 /*
     Navbar collapse (body)
     Group your navbar content into this for easy collapsing and expanding across various device sizes. 
@@ -77,27 +77,9 @@ $navbar-padding-vertical:       15px;
     &.in {
       overflow-y: visible;
     }
-
-    // Undo the collapse side padding for navbars with containers to ensure alignment of right-aligned contents.
-    .navbar-fixed-top &,
-    .navbar-static-top &,
-    .navbar-fixed-bottom & {
-      padding-left: 0;
-      padding-right: 0;
-    }
   }
 }
 
-.navbar-fixed-top,
-.navbar-fixed-bottom {
-  .navbar-collapse {
-    max-height: $navbar-collapse-max-height;
-    // (orientation: landscape) — cтиль для устройств с альбомной ориентацией
-    @media (max-device-width: $screen-xs-min) and (orientation: landscape) {
-      max-height: 200px;
-    }
-  }
-}
 
 
 /*  
@@ -133,9 +115,13 @@ $navbar-padding-vertical:       15px;
   @include navbar-vertical-align(34px);
   background-color: transparent;
   background-image: none;       // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-  border: 1px solid transparent;
+  border: 2px solid #fff;
   border-radius: 4px;
-
+    &:hover,
+    &:focus {
+        background-color: $brand-primary;
+        @include transition(background-color .5s)
+    }
   /* We remove the `outline` here, but later compensate by attaching `:hover` styles to `:focus`. */
   &:focus {outline: 0;}
 
@@ -143,8 +129,9 @@ $navbar-padding-vertical:       15px;
   .icon-bar {
     display: block;
     width: 22px;
-    height: 2px;
+    height: 3px;
     border-radius: 1px;
+    background-color: #fff;
   }
   .icon-bar + .icon-bar {
     margin-top: 4px;
@@ -170,30 +157,6 @@ $navbar-padding-vertical:       15px;
     line-height: $line-height-base;
   }
 
-  @media (max-width: $grid-float-breakpoint-max) {
-    // Dropdowns get custom display when collapsed
-    .open .dropdown-menu {
-      position: static;
-      float: none;
-      width: auto;
-      margin-top: 0;
-      background-color: transparent;
-      border: 0;
-      box-shadow: none;
-      > li > a,
-      .dropdown-header {
-        padding: 5px 15px 5px 25px;
-      }
-      > li > a {
-        line-height: $line-height-base;
-        &:hover,
-        &:focus {
-          background-image: none;
-        }
-      }
-    }
-  }
-
   // Uncollapse the nav
   @media (min-width: $grid-float-breakpoint) {
     float: left;
@@ -210,46 +173,6 @@ $navbar-padding-vertical:       15px;
 }
 
 
-/* 
-  Navbar form
-  Extension of the `.form-inline` with some extra flavor for optimum display in our navbars.
-*/
-.navbar-form {
-  margin-left: -$navbar-padding-horizontal;
-  margin-right: -$navbar-padding-horizontal;
-  padding: 10px $navbar-padding-horizontal;
-  border-top: 1px solid transparent;
-  border-bottom: 1px solid transparent;
-  $shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1);
-
-  // Mixin behavior for optimum display
-  // @include form-inline;
-
-  .form-group {
-    @media (max-width: $grid-float-breakpoint-max) {
-      margin-bottom: 5px;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-  }
-
-  // Vertically center in expanded, horizontal navbar
-  // @include navbar-vertical-align($input-height-base);
-
-  // Undo 100% width for pull classes
-  @media (min-width: $grid-float-breakpoint) {
-    width: auto;
-    border: 0;
-    margin-left: 0;
-    margin-right: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    // @include box-shadow(none);
-  }
-}
-
 // Component alignment
 //
 // Repurpose the pull utilities as their own navbar utilities to avoid specificity
@@ -264,7 +187,6 @@ $navbar-padding-vertical:       15px;
   }
   .navbar-right {
     float: right !important;
-    // margin-right: -$navbar-padding-horizontal;
     ~ .navbar-right {
       margin-right: 0;
     }
@@ -306,4 +228,29 @@ tbody.collapse.in { display: table-row-group; }
   @include transition-property(height, visibility);
   @include transition-duration(.35s);
   @include transition-timing-function(ease);
+}
+
+// Custom
+
+.nav-mark {
+    position: relative;
+    padding: 0 12px;
+    &:before {
+        content: "";
+        display: block;
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        left: 0;
+        top: 45%;
+        background-color: $brand-primary;
+    }
+    &:first-child:before {
+        display: none;
+    }
+    @media (max-width: $grid-float-breakpoint) {
+        &:before {
+            display: none;
+        }
+    }
 }
