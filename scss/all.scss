@@ -1,17 +1,10 @@
-<<<<<<< HEAD
-@import 'components/variables';
-@import 'components/mixins';
+@import 'variables';
+@import 'mixins';
 
 @import 'components/type/type';
 @import 'components/icons/icons';
 @import 'components/buttons/buttons';
-
-@import 'components/carousel/carousel';
-
-@import 'components/core/grid';
-=======
 @import "bourbon/bourbon";
-@import "variables";
 
 //grid
 @import 'core/normalize';
@@ -27,4 +20,3 @@
 @import 'components/navbar/nav';
 @import 'components/navbar/navbar';
 @import 'components/navbar/logo';
->>>>>>> 03e497aafea5677f2bed5391c274cece3f663330
