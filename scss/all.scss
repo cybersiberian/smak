@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import 'components/variables';
 @import 'components/mixins';
 
@@ -8,3 +9,22 @@
 @import 'components/carousel/carousel';
 
 @import 'components/core/grid';
+=======
+@import "bourbon/bourbon";
+@import "variables";
+
+//grid
+@import 'core/normalize';
+@import 'core/scaffolding';
+@import 'core/grid-system';
+@import 'core/grid-framework';
+@import 'core/grid';
+
+//layouts
+@import 'components/layouts/header';
+
+// components
+@import 'components/navbar/nav';
+@import 'components/navbar/navbar';
+@import 'components/navbar/logo';
+>>>>>>> 03e497aafea5677f2bed5391c274cece3f663330

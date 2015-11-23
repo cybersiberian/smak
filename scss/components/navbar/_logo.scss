@@ -1,0 +1,11 @@
+.logo {
+	float: left;
+	width: 105px;
+	height: 59px;
+	&-first-letter {
+		fill: $brand-primary;
+	}
+	&-last-letter {
+		fill: #fff;
+	}
+}

@@ -1,0 +1,33 @@
+// base nav
+$nav-link-padding:      5px 10px;
+$nav-link-hover-bg:     #fafafa;
+
+
+.nav {
+  margin-bottom: 0;
+  padding-left: 0; // Override default ul/ol
+  list-style: none;
+  @include clearfix;
+
+  > li {
+    position: relative;
+    display: block;
+
+    > a {
+      position: relative;
+      display: block;
+      padding: $nav-link-padding;
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        background-color: $nav-link-hover-bg;
+      }
+    }
+  }
+
+  /* Prevent IE8 from misplacing imgs */
+  /* See https://github.com/h5bp/html5-boilerplate/issues/984#issuecomment-3985989 */
+  > li > a > img {
+    max-width: none;
+  }
+}
