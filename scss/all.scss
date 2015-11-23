@@ -1,5 +1,10 @@
+@import 'variables';
+@import 'mixins';
+
+@import 'components/type/type';
+@import 'components/icons/icons';
+@import 'components/buttons/buttons';
 @import "bourbon/bourbon";
-@import "variables";
 
 //grid
 @import 'core/normalize';

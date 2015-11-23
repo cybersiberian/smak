@@ -1,8 +1,442 @@
-@charset "UTF-8";
-/* Я закинул базовые переменные, чтобы компилировался all.css. Как доберешься до типографики, повставляй нужные значения :) */
+/* //** Width of the `border` for generating carets that indicator dropdowns.
+$caret-width-base:          4px !default;
+//** Carets increase slightly in size for larger components.
+$caret-width-large:         5px !default; */
 /*  Media queries breakpoints
 	Define the breakpoints at which your layout will change, adapting to different screen sizes. */
 /*  Point at which the navbar becomes uncollapsed. */
+@font-face {
+  font-family: 'Oswald-Bold';
+  src: url("../fonts/oswald/Oswald-Bold.eot") format("embedded-opentype"), url("../fonts/oswald/Oswald-Bold.woff") format("woff"), url("../fonts/oswald/Oswald-Bold.ttf") format("truetype"), url("../fonts/oswald/Oswald-Bold.svg#Oswald-Bold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Oswald-Regular';
+  src: url("../fonts/oswald/Oswald-Regular.eot") format("embedded-opentype"), url("../fonts/oswald/Oswald-Regular.woff") format("woff"), url("../fonts/oswald/Oswald-Regular.ttf") format("truetype"), url("../fonts/oswald/Oswald-Regular.svg#Oswald-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Oswald-Light';
+  src: url("../fonts/oswald/Oswald-Light.eot") format("embedded-opentype"), url("../fonts/oswald/Oswald-Light.woff") format("woff"), url("../fonts/oswald/Oswald-Light.ttf") format("truetype"), url("../fonts/oswald/Oswald-Light.svg#Oswald-Light") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  font-family: 'oswald-bold';
+  text-align: center;
+  line-height: 1.42;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 64px;
+}
+
+h2 {
+  font-size: 29px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 16px;
+  font-family: 'oswald-regular';
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  margin-top: 22px;
+  margin-bottom: 11px;
+}
+
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 11px;
+  margin-bottom: 11px;
+}
+
+p {
+  margin: 0 0 11px;
+}
+
+.lead {
+  margin-bottom: 22px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+  .lead {
+    font-size: 24px;
+  }
+}
+
+p, a {
+  font-size: 16px;
+  font-family: 'oswald-regular';
+  text-decoration: none;
+  color: inherit;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.text-base {
+  color: #131316;
+}
+
+.text-inverse {
+  color: #ffffff;
+}
+
+.text-highlited {
+  color: #ffe600;
+}
+
+.text-holder-dark {
+  background: #131316;
+}
+
+hr {
+  text-align: center;
+  background: #ffe600;
+  height: 2px;
+  width: 171px;
+  border: none;
+}
+
+blockquote {
+  padding: 11px 22px;
+  margin: 0 0 22px;
+  font-size: 20px;
+  border-left: 5px solid #707070;
+}
+
+blockquote p:last-child,
+blockquote ul:last-child,
+blockquote ol:last-child {
+  margin-bottom: 0;
+}
+
+blockquote footer,
+blockquote small,
+blockquote .small {
+  display: block;
+  font-size: 80%;
+  line-height: 1.42;
+  color: #515151;
+}
+
+blockquote footer:before,
+blockquote small:before,
+blockquote .small:before {
+  content: '\2014 \00A0';
+}
+
+.blockquote-reverse,
+blockquote.pull-right {
+  padding-right: 15px;
+  padding-left: 0;
+  border-right: 5px solid #707070;
+  border-left: 0;
+  text-align: right;
+}
+
+.blockquote-reverse footer:before,
+.blockquote-reverse small:before,
+.blockquote-reverse .small:before,
+blockquote.pull-right footer:before,
+blockquote.pull-right small:before,
+blockquote.pull-right .small:before {
+  content: '';
+}
+
+.blockquote-reverse footer:after,
+.blockquote-reverse small:after,
+.blockquote-reverse .small:after,
+blockquote.pull-right footer:after,
+blockquote.pull-right small:after,
+blockquote.pull-right .small:after {
+  content: '\00A0 \2014';
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon/icomoon.eot");
+  src: url("../fonts/icomoon/icomoon.eot") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf") format("truetype"), url("../fonts/icomoon/icomoon.woff") format("woff"), url("../fonts/icomoon/icomoon.svg#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-analyse:before {
+  content: "\e900";
+}
+
+.icon-arrow-down:before {
+  content: "\e901";
+}
+
+.icon-arrows:before {
+  content: "\e902";
+}
+
+.icon-clock:before {
+  content: "\e903";
+}
+
+.icon-developing:before {
+  content: "\e904";
+}
+
+.icon-dribble:before {
+  content: "\e905";
+}
+
+.icon-facebook:before {
+  content: "\e906";
+}
+
+.icon-finalasy:before {
+  content: "\e907";
+}
+
+.icon-float:before {
+  content: "\e908";
+}
+
+.icon-google:before {
+  content: "\e909";
+}
+
+.icon-graphic-design:before {
+  content: "\e90a";
+}
+
+.icon-house:before {
+  content: "\e90b";
+}
+
+.icon-icon:before {
+  content: "\e90c";
+}
+
+.icon-left-arrow:before {
+  content: "\e90d";
+}
+
+.icon-like:before {
+  content: "\e90e";
+}
+
+.icon-mail:before {
+  content: "\e90f";
+}
+
+.icon-messege:before {
+  content: "\e910";
+}
+
+.icon-phone:before {
+  content: "\e911";
+}
+
+.icon-photo:before {
+  content: "\e912";
+}
+
+.icon-prep:before {
+  content: "\e913";
+}
+
+.icon-right-arrow:before {
+  content: "\e914";
+}
+
+.icon-testing:before {
+  content: "\e915";
+}
+
+.icon-twitter:before {
+  content: "\e916";
+}
+
+.icon-wed-design:before {
+  content: "\e917";
+}
+
+.icon-work:before {
+  content: "\e918";
+}
+
+/* ICONS BASIC */
+.icon {
+  display: inline-block;
+  padding: 0.8em;
+  color: #ffe600;
+  border: 2px solid transparent;
+}
+
+.icon .slim {
+  padding: 0 4px;
+}
+
+/* ICONS Primary*/
+.icon-primary {
+  font-size: 44px;
+}
+
+/* ICONS Secondary*/
+.icon-secondary {
+  font-size: 34px;
+}
+
+.icon-base {
+  font-size: 20px;
+}
+
+.icon-small {
+  font-size: 10px;
+}
+
+/* ICONS Square border*/
+.square-bg {
+  border-radius: 0 !important;
+}
+
+.social, .social > a {
+  color: #ffffff;
+  border-color: #ffffff;
+  font-size: 10px;
+}
+
+.icon-holder {
+  background: black;
+  padding: 10px;
+}
+
+.simple {
+  background: transparent;
+  border-color: transparent;
+  border-radius: 50%;
+}
+
+.simple:hover,
+.simple:active {
+  background: transparent;
+  border-color: #ffe600;
+}
+
+.bordered:hover,
+.bordered:active {
+  border: 2px solid #ffe600;
+}
+
+.filled {
+  background: #ffe600;
+  border-radius: 50%;
+  color: #ffffff !important;
+  border-color: inherit;
+  border: 2px solid;
+}
+
+.filled:hover,
+.filled:active {
+  background: transparent;
+  border-color: #131316 !important;
+  color: #ffe600 !important;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1em 2em;
+  background: #ffe600;
+  border: 2px solid #ffe600;
+  font-family: 'oswald-bold';
+  text-transform: uppercase;
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+  background-color: transparent;
+  border-color: #ffe600;
+  color: #131316;
+  outline: none;
+}
+
+.btn-xl {
+  font-size: 20px;
+}
+
+.btn-md {
+  font-size: 15px;
+}
+
+.btn-base {
+  color: #131316;
+}
+
+.btn-inverse {
+  color: #ffffff;
+}
+
+.btn-capital {
+  text-transform: capitalize;
+}
+
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -398,11 +832,15 @@ th {
 }
 
 * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 *:before,
 *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -412,9 +850,9 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.4;
+  font-family: "Oswald-Light", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.42;
   color: #707070;
   background-color: #fff;
 }
@@ -1445,9 +1883,35 @@ header::after {
 .navbar-nav > li > a {
   padding-top: 10px;
   padding-bottom: 10px;
-  line-height: 1.4;
+  line-height: 1.42;
 }
 
+<<<<<<< HEAD
+=======
+@media (max-width: 767px) {
+  .navbar-nav .open .dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+  .navbar-nav .open .dropdown-menu > li > a,
+  .navbar-nav .open .dropdown-menu .dropdown-header {
+    padding: 5px 15px 5px 25px;
+  }
+  .navbar-nav .open .dropdown-menu > li > a {
+    line-height: 1.42;
+  }
+  .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-nav .open .dropdown-menu > li > a:focus {
+    background-image: none;
+  }
+}
+
+>>>>>>> 922b7206959ccf4788f3eca0ff9e70b2e763e7c3
 @media (min-width: 768px) {
   .navbar-nav {
     float: left;
@@ -1483,6 +1947,7 @@ header::after {
 .fade {
   opacity: 0;
   -webkit-transition: opacity 0.15s linear;
+  -moz-transition: opacity 0.15s linear;
   transition: opacity 0.15s linear;
 }
 
@@ -1511,10 +1976,13 @@ tbody.collapse.in {
   height: 0;
   overflow: hidden;
   -webkit-transition-property: height, visibility;
+  -moz-transition-property: height, visibility;
   transition-property: height, visibility;
   -webkit-transition-duration: 0.35s;
+  -moz-transition-duration: 0.35s;
   transition-duration: 0.35s;
   -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
   transition-timing-function: ease;
 }
 
@@ -1557,6 +2025,7 @@ tbody.collapse.in {
 .logo-last-letter {
   fill: #fff;
 }
+<<<<<<< HEAD
 
 .countup-content {
   padding: 60px 0;
@@ -1575,3 +2044,5 @@ tbody.collapse.in {
 }
 
 /*# sourceMappingURL=all.css.map */
+=======
+>>>>>>> 922b7206959ccf4788f3eca0ff9e70b2e763e7c3
