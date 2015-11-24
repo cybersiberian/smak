@@ -1,0 +1,30 @@
+@import 'variables';
+@import 'mixins';
+
+@import 'components/type/type';
+@import 'components/icons/icons';
+@import 'components/buttons/buttons';
+@import "bourbon/bourbon";
+
+//grid
+@import 'core/normalize';
+@import 'core/scaffolding';
+@import 'core/grid-system';
+@import 'core/grid-framework';
+@import 'core/grid';
+
+//layouts
+@import 'components/layouts/header';
+
+// components
+@import 'components/navbar/nav';
+@import 'components/navbar/navbar';
+@import 'components/navbar/logo';
+<<<<<<< HEAD
+
+// gallery
+
+@import 'components/gallery/g-components';
+=======
+@import 'components/countup/countup';
+>>>>>>> faa02b18a9da01757a2f27edb4d9dcf7d96e9ea9

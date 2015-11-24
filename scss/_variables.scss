@@ -45,8 +45,13 @@ $brand-primary:					#ffe600;
 // $content-bg-dark:				#122a2f;
 $content-bg-darker:				#131a1d;
 
+<<<<<<< HEAD
+$link-color:              		$darkest-blue;
+$link-hover-color:        		darken($link-color, 15%);
+=======
 $link-color:              		#fff;
 $link-hover-color:        		$brand-primary;
+>>>>>>> faa02b18a9da01757a2f27edb4d9dcf7d96e9ea9
 $link-hover-decoration:			underline;
 
 
