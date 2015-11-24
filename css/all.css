@@ -333,6 +333,13 @@ blockquote.pull-right .small:after {
   padding: 0 4px;
 }
 
+.icon-bg:hover a,
+.icon-bg:active a,
+.icon-bg:focus a {
+  color: #ffe600 !important;
+  text-decoration: none !important;
+}
+
 /* ICONS Primary*/
 .icon-primary {
   font-size: 44px;
@@ -388,8 +395,7 @@ blockquote.pull-right .small:after {
   background: #ffe600;
   border-radius: 50%;
   color: #ffffff !important;
-  border-color: inherit;
-  border: 2px solid;
+  border: 2px solid transparent;
 }
 
 .filled:hover,
