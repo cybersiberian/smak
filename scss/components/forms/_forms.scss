@@ -1,0 +1,39 @@
+.form-inline {
+	font-size: 0;
+	.form-control {
+		display: inline-block;
+		width: 32%;
+		font-size: $font-size-base;
+		margin-right: 1%;
+		margin-left: 1%;
+		&:first-of-type 	{margin-left: 0;}
+		&:last-of-type 		{margin-right: 0;}
+/* 		@include xs-down {
+			width: 100%;
+			margin: 8px 0;
+		} */
+		@media (max-width: $grid-float-breakpoint) {
+			width: 100%;
+			margin: 8px 0;
+		}
+	}
+}
+
+.textarea-control {
+	margin: 0;
+	height: auto;
+	resize: none;
+}
+
+.form-control {
+	border-radius: 2px;
+	border: 1px solid #c8c8c8;
+	display: block;
+	margin: 15px 0;
+	padding: 5px;
+	width: 100%;
+	&:focus,
+	&:active {
+		outline: none;
+	}
+}
