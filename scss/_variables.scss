@@ -22,6 +22,7 @@ $brand-danger:          #d9534f !default;
 
 //## custom colors
 $darkest-blue:			darken(desaturate(adjust-hue(#131a1d, 42.0000), 13.5163), 1.3725); //#131316;
+$darker-blue:			lighten(saturate(adjust-hue(#131316, -35.0000), 17.6829), 1.3725); //#12191e
 $blue-base:				#131a1d;
 $blue-light:			lighten(saturate(adjust-hue(#131a1d, -7.6552), 23.7821), 3.3333); // #122a2f;
 $blue-lighter:			lighten(saturate(adjust-hue(#131a1d, -9.2195), 33.8333), 5.2941); // #11343a;

@@ -30,8 +30,9 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   font-family: 'oswald-bold';
   text-align: center;
-  line-height: 1.42;
   line-height: 1.1;
+  line-height: 1.1;
+  font-weight: lighter;
 }
 
 h1 {
@@ -55,7 +56,7 @@ h1, .h1,
 h2, .h2,
 h3, .h3 {
   margin-top: 22px;
-  margin-bottom: 11px;
+  margin-bottom: 22px;
 }
 
 h4, .h4,
@@ -66,7 +67,7 @@ h6, .h6 {
 }
 
 p {
-  margin: 0 0 11px;
+  margin: 0 0 0.71;
 }
 
 .lead {
@@ -84,7 +85,7 @@ p {
 
 p, a {
   font-size: 16px;
-  font-family: 'oswald-regular';
+  font-family: 'oswald-light';
   text-decoration: none;
   color: inherit;
 }
@@ -137,10 +138,10 @@ p, a {
   background: #131316;
 }
 
-hr {
+hr.heading {
   text-align: center;
   background: #ffe600;
-  height: 2px;
+  height: 3px;
   width: 171px;
   border: none;
 }
@@ -198,6 +199,22 @@ blockquote.pull-right footer:after,
 blockquote.pull-right small:after,
 blockquote.pull-right .small:after {
   content: '\00A0 \2014';
+}
+
+.content-wrapper {
+  padding: 45px 0;
+}
+
+.inverse-bg {
+  background: #131316;
+}
+
+.gray-bg {
+  background: #fbfbfb;
+}
+
+.dark-bg {
+  background: #12191e;
 }
 
 @font-face {
@@ -643,7 +660,6 @@ figure {
  */
 hr {
   box-sizing: content-box;
-  height: 0;
 }
 
 /**
@@ -2239,7 +2255,6 @@ tbody.collapse.in {
 
 .countup-content {
   padding: 60px 0;
-  background-color: #122a2f;
 }
 
 .countup-item {
