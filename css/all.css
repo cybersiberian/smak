@@ -30,8 +30,10 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   font-family: 'oswald-bold';
   text-align: center;
-  line-height: 1.42;
   line-height: 1.1;
+  line-height: 1.1;
+  font-weight: lighter;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1 {
@@ -55,7 +57,7 @@ h1, .h1,
 h2, .h2,
 h3, .h3 {
   margin-top: 22px;
-  margin-bottom: 11px;
+  margin-bottom: 22px;
 }
 
 h4, .h4,
@@ -66,7 +68,7 @@ h6, .h6 {
 }
 
 p {
-  margin: 0 0 11px;
+  margin: 0 0 0.71;
 }
 
 .lead {
@@ -84,7 +86,7 @@ p {
 
 p, a {
   font-size: 16px;
-  font-family: 'oswald-regular';
+  font-family: 'oswald-light';
   text-decoration: none;
   color: inherit;
 }
@@ -137,10 +139,10 @@ p, a {
   background: #131316;
 }
 
-hr {
+hr.heading {
   text-align: center;
   background: #ffe600;
-  height: 2px;
+  height: 3px;
   width: 171px;
   border: none;
 }
@@ -333,6 +335,13 @@ blockquote.pull-right .small:after {
   padding: 0 4px;
 }
 
+.icon-bg:hover a,
+.icon-bg:active a,
+.icon-bg:focus a {
+  color: #ffe600 !important;
+  text-decoration: none !important;
+}
+
 /* ICONS Primary*/
 .icon-primary {
   font-size: 44px;
@@ -363,8 +372,8 @@ blockquote.pull-right .small:after {
 }
 
 .icon-holder {
-  background: black;
   padding: 10px;
+  text-align: center;
 }
 
 .simple {
@@ -388,8 +397,7 @@ blockquote.pull-right .small:after {
   background: #ffe600;
   border-radius: 50%;
   color: #ffffff !important;
-  border-color: inherit;
-  border: 2px solid;
+  border: 2px solid transparent;
 }
 
 .filled:hover,
@@ -420,6 +428,7 @@ blockquote.pull-right .small:after {
 .btn:hover a,
 .btn:active a,
 .btn:focus a {
+  color: #ffe600;
   text-decoration: none;
 }
 
@@ -636,7 +645,6 @@ figure {
  */
 hr {
   box-sizing: content-box;
-  height: 0;
 }
 
 /**
@@ -838,11 +846,15 @@ th {
 }
 
 * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 *:before,
 *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -869,21 +881,13 @@ textarea {
 }
 
 a {
-<<<<<<< HEAD
-  color: #131316;
-=======
   color: #fff;
->>>>>>> faa02b18a9da01757a2f27edb4d9dcf7d96e9ea9
   text-decoration: none;
 }
 
 a:hover,
 a:focus {
-<<<<<<< HEAD
-  color: black;
-=======
   color: #ffe600;
->>>>>>> faa02b18a9da01757a2f27edb4d9dcf7d96e9ea9
   text-decoration: underline;
 }
 
@@ -1694,25 +1698,20 @@ header::after {
   display: table;
 }
 
-.heading-wrapper {
-  background-color: #11343a;
-  padding: 290px 0;
-  position: relative;
+.content-wrapper {
+  padding: 45px 0;
 }
 
-.heading-wrapper .square-bg {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-  -ms-transform: translate(-50%, 0);
-  transform: translate(-50%, 0);
+.inverse-bg {
+  background: #131316;
 }
 
-.heading-content {
-  background-color: #122a2f;
-  text-align: center;
-  padding: 60px 0;
+.gray-bg {
+  background: #fbfbfb;
+}
+
+.dark-bg {
+  background: #12191e;
 }
 
 .nav {
@@ -1882,6 +1881,7 @@ header::after {
 .navbar-toggle:focus {
   background-color: #ffe600;
   -webkit-transition: background-color 0.5s;
+  -moz-transition: background-color 0.5s;
   transition: background-color 0.5s;
 }
 
@@ -1952,6 +1952,7 @@ header::after {
 .fade {
   opacity: 0;
   -webkit-transition: opacity 0.15s linear;
+  -moz-transition: opacity 0.15s linear;
   transition: opacity 0.15s linear;
 }
 
@@ -1980,10 +1981,13 @@ tbody.collapse.in {
   height: 0;
   overflow: hidden;
   -webkit-transition-property: height, visibility;
+  -moz-transition-property: height, visibility;
   transition-property: height, visibility;
   -webkit-transition-duration: 0.35s;
+  -moz-transition-duration: 0.35s;
   transition-duration: 0.35s;
   -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
   transition-timing-function: ease;
 }
 
@@ -2035,7 +2039,7 @@ tbody.collapse.in {
 
 .og-grid {
   list-style: none;
-  padding: 20px 0;
+  padding: 10px 0;
   margin: 0 auto;
   text-align: center;
   width: 100%;
@@ -2045,7 +2049,7 @@ tbody.collapse.in {
   display: inline-block;
   margin: 10px 5px 0 5px;
   vertical-align: top;
-  height: 250px;
+  height: 100%;
 }
 
 .og-grid li > a,
@@ -2084,16 +2088,16 @@ tbody.collapse.in {
 }
 
 .og-expander-inner {
-  padding: 5% 22%;
+  padding: 5% 25%;
   height: 100%;
   text-align: justify;
 }
 
 .og-close {
   position: absolute;
-  width: 14px;
-  height: 14px;
-  top: 10%;
+  width: 19px;
+  height: 19px;
+  top: 5%;
   right: 20%;
   cursor: pointer;
 }
@@ -2124,11 +2128,18 @@ tbody.collapse.in {
 
 .og-fullimg,
 .og-details {
-  width: 50%;
   float: left;
   height: 100%;
   overflow: hidden;
   position: relative;
+}
+
+.og-fullimg {
+  width: 60%;
+}
+
+.og-details {
+  width: 40%;
 }
 
 .og-details {
@@ -2155,9 +2166,9 @@ tbody.collapse.in {
   top: 50%;
   left: 50%;
   margin: -25px 0 0 -25px;
-  -webkit-animation: loader 0.5s infinite ease-in-out both;
-  -moz-animation: loader 0.5s infinite ease-in-out both;
-  animation: loader 0.5s infinite ease-in-out both;
+  -webkit-animation: loader 300ms infinite ease-in-out both;
+  -moz-animation: loader 300ms infinite ease-in-out both;
+  animation: loader 300ms infinite ease-in-out both;
 }
 
 @-webkit-keyframes loader {
@@ -2202,6 +2213,25 @@ tbody.collapse.in {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .og-expander-inner {
+    padding: 5% 5%;
+    height: 100%;
+    text-align: justify;
+  }
+  .og-expander-inner p {
+    font-size: 14px;
+  }
+  .og-close {
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    top: 5%;
+    right: 5%;
+    cursor: pointer;
+  }
+}
+
 @media screen and (max-width: 830px) {
   .og-expander h3 {
     font-size: 32px;
@@ -2223,12 +2253,9 @@ tbody.collapse.in {
     width: 100%;
   }
 }
-=======
-<<<<<<< HEAD
 
 .countup-content {
   padding: 60px 0;
-  background-color: #122a2f;
 }
 
 .countup-item {
@@ -2250,12 +2277,3 @@ tbody.collapse.in {
   font-size: 16px;
   font-family: 'Oswald-Regular';
 }
-
-<<<<<<< HEAD
-/*# sourceMappingURL=all.css.map */
-=======
-/*# sourceMappingURL=all.css.map */
-=======
->>>>>>> 922b7206959ccf4788f3eca0ff9e70b2e763e7c3
->>>>>>> faa02b18a9da01757a2f27edb4d9dcf7d96e9ea9
->>>>>>> a961a93220dff8ec4f10ab9bd52a1e511b175c98

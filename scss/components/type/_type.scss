@@ -27,8 +27,10 @@ h1,h2,h3,h4,h5,h6{
     text-transform: uppercase;
     font-family: 'oswald-bold';
     text-align: center;
-    line-height: $line-height-base;
     line-height: $headings-line-height;
+    line-height: $headings-line-height;
+    font-weight: lighter;
+    -webkit-font-smoothing: antialiased;
 }
 
 h1{
@@ -37,7 +39,10 @@ h1{
 
 h2{
   font-size: $font-size-h2;
+
 }
+
+
 h3{
   font-size: $font-size-h3;
 }
@@ -50,7 +55,7 @@ h1, .h1,
 h2, .h2,
 h3, .h3 {
   margin-top: $line-height-computed;
-  margin-bottom: ($line-height-computed / 2);
+  margin-bottom: $line-height-computed;
 
 }
 h4, .h4,
@@ -63,7 +68,7 @@ h6, .h6 {
 // -------------------------
 
 p {
-  margin: 0 0 ($line-height-computed / 2);
+  margin: 0 0 ($line-height-base/ 2);
 }
 
 .lead {
@@ -79,9 +84,10 @@ p {
 
 p,a{
   font-size: $font-size-base;
-  font-family: 'oswald-regular'; 
+  font-family: 'oswald-light'; 
   text-decoration: none;
   color: inherit;
+
 }
 // Alignment
 .text-left           { text-align: left; }
@@ -113,10 +119,10 @@ p,a{
 
 }
 
-hr{
+hr.heading{
     text-align: center;
-    background: #ffe600;
-    height: 2px;
+    background: $yellow;
+    height: 3px;
     width: 171px;
     border: none;
 }
@@ -173,3 +179,4 @@ blockquote.pull-right {
     }
   }
 }
+

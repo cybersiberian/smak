@@ -110,11 +110,22 @@
 		.slim{
 		padding: 0 4px;
 	}
-
-
 }
 
+.icon-bg{
+	&:hover,
+	&:active,
+	&:focus{
 
+		a{
+			color: $yellow!important;
+			text-decoration: none!important;
+		}
+
+
+	}
+
+}
 /* ICONS Primary*/
 
 .icon-primary{
@@ -152,8 +163,9 @@
 
 // "icon-holder" for better visibility - do noy include in main html
 .icon-holder{
-	background: black;
 	padding: 10px;
+	text-align: center;
+
 }
 
 
@@ -185,8 +197,7 @@
 	background: $yellow;
 	border-radius: 50%;
 	color: $white!important;
-	border-color: inherit;
-	border: 2px solid;
+	border: 2px solid transparent;
 
 	&:hover,
 	&:active{
