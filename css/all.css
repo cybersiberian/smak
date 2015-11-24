@@ -33,6 +33,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
   line-height: 1.1;
   font-weight: lighter;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1 {
@@ -199,22 +200,6 @@ blockquote.pull-right footer:after,
 blockquote.pull-right small:after,
 blockquote.pull-right .small:after {
   content: '\00A0 \2014';
-}
-
-.content-wrapper {
-  padding: 45px 0;
-}
-
-.inverse-bg {
-  background: #131316;
-}
-
-.gray-bg {
-  background: #fbfbfb;
-}
-
-.dark-bg {
-  background: #12191e;
 }
 
 @font-face {
@@ -1711,6 +1696,22 @@ header::after {
   clear: both;
   content: "";
   display: table;
+}
+
+.content-wrapper {
+  padding: 45px 0;
+}
+
+.inverse-bg {
+  background: #131316;
+}
+
+.gray-bg {
+  background: #fbfbfb;
+}
+
+.dark-bg {
+  background: #12191e;
 }
 
 .nav {
