@@ -2037,6 +2037,107 @@ tbody.collapse.in {
   }
 }
 
+.form-inline {
+  font-size: 0;
+}
+
+.form-inline .form-control {
+  display: inline-block;
+  width: 32%;
+  font-size: 16px;
+  margin-right: 1%;
+  margin-left: 1%;
+}
+
+.form-inline .form-control:first-of-type {
+  margin-left: 0;
+}
+
+.form-inline .form-control:last-of-type {
+  margin-right: 0;
+}
+
+@media (max-width: 768px) {
+  .form-inline .form-control {
+    width: 100%;
+    margin: 8px 0;
+  }
+}
+
+.textarea-control {
+  margin: 0;
+  height: auto;
+  resize: none;
+}
+
+.form-control {
+  border-radius: 2px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  display: block;
+  margin: 15px 0;
+  padding: 5px;
+  width: 100%;
+  /* Firefox 19+ */
+  /* Firefox 18- */
+}
+
+.form-control:hover,
+.form-control:focus,
+.form-control:active {
+  outline: none;
+  /* Firefox 19+ */
+  /* Firefox 18- */
+}
+
+.form-control:hover::-webkit-input-placeholder,
+.form-control:focus::-webkit-input-placeholder,
+.form-control:active::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.form-control:hover::-moz-placeholder,
+.form-control:focus::-moz-placeholder,
+.form-control:active::-moz-placeholder {
+  opacity: 0;
+}
+
+.form-control:hover:-moz-placeholder,
+.form-control:focus:-moz-placeholder,
+.form-control:active:-moz-placeholder {
+  opacity: 0;
+}
+
+.form-control:hover:-ms-input-placeholder,
+.form-control:focus:-ms-input-placeholder,
+.form-control:active:-ms-input-placeholder {
+  opacity: 0;
+}
+
+.form-control::-webkit-input-placeholder {
+  font-size: 15px;
+  color: #fff;
+}
+
+.form-control::-moz-placeholder {
+  font-size: 15px;
+  color: #fff;
+}
+
+.form-control:-moz-placeholder {
+  font-size: 15px;
+  color: #fff;
+}
+
+.form-control:-ms-input-placeholder {
+  font-size: 15px;
+  color: #fff;
+}
+
+.form-center {
+  text-align: center;
+}
+
 .og-grid {
   list-style: none;
   padding: 20px 0;
@@ -2536,4 +2637,53 @@ span.thumbnail.active {
   color: #ffe600;
   font-size: 16px;
   font-family: 'Oswald-Regular';
+}
+
+.countup-circle,
+.countup-circle-01,
+.countup-circle-02,
+.countup-circle-03 {
+  display: inline-block;
+  width: auto;
+  position: relative;
+}
+
+.countup-circle canvas,
+.countup-circle-01 canvas,
+.countup-circle-02 canvas,
+.countup-circle-03 canvas {
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.countup-circle-data,
+.countup-circle-01-data,
+.countup-circle-02-data,
+.countup-circle-03-data {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #ffe600;
+  font-size: 34px;
+}
+
+.countup-circle-caption,
+.countup-circle-01-caption,
+.countup-circle-02-caption,
+.countup-circle-03-caption {
+  display: block;
+  font-size: 20px;
+  font-family: 'Oswald-Regular';
+  color: #ffe600;
+  padding-top: 25px;
+}
+
+.countup-center {
+  text-align: center;
 }
