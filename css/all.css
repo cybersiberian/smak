@@ -2008,6 +2008,12 @@ tbody.collapse.in {
   fill: #fff;
 }
 
+@media (max-width: 768px) {
+  .logo {
+    margin-left: 15px;
+  }
+}
+
 .og-grid {
   list-style: none;
   padding: 10px 0;
@@ -2239,4 +2245,13 @@ tbody.collapse.in {
 .countup-quantity {
   display: block;
   text-align: center;
+  font-size: 40px;
+  font-family: 'Oswald-Bold';
+  color: #ffffff;
+}
+
+.countup-caption {
+  color: #ffe600;
+  font-size: 16px;
+  font-family: 'Oswald-Regular';
 }

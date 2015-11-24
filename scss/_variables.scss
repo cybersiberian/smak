@@ -41,8 +41,8 @@ $body-bg:                 		#fff;
 $text-color:              		#707070;
 
 $brand-primary:					#ffe600;
-$content-bg-light:				#11343a;
-$content-bg-dark:				#122a2f;
+// $content-bg-light:				#11343a;
+// $content-bg-dark:				#122a2f;
 $content-bg-darker:				#131a1d;
 
 
@@ -69,21 +69,22 @@ $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $font-family-base:        $font-family-sans-serif !default;
 
-$font-size-base:          16px !default;
-$font-size-large:         ceil(($font-size-base * 1.25)); // 20px
-$font-size-small:         ceil(($font-size-base * 0.935)); //15px
-$font-size-icons-lg:	ceil(($font-size-base * 2.75)); //44px
-$font-size-icons-md:	ceil(($font-size-base * 2.125)); //34px
-$font-size-icons-sm:	ceil(($font-size-base * 1.25)); //20px
-$font-size-icons-xs:	ceil(($font-size-base * 0.625)); //10px
+$font-size-base:          	16px !default;
+$font-size-large:         	ceil(($font-size-base * 1.25)); // 20px
+$font-size-small:         	ceil(($font-size-base * 0.935)); //15px
+$font-size-icons-lg:		ceil(($font-size-base * 2.75)); //44px
+$font-size-icons-md:		ceil(($font-size-base * 2.125)); //34px
+$font-size-icons-sm:		ceil(($font-size-base * 1.25)); //20px
+$font-size-icons-xs:		ceil(($font-size-base * 0.625)); //10px
 
 
-$font-size-h1:            floor(($font-size-base * 4.06)); // 65px
-$font-size-h2:            floor(($font-size-base * 1.87)); // 30px
-$font-size-h3:            ceil(($font-size-base * 1.25)); // 20px
-$font-size-h4:            $font-size-base !default;
-$font-size-h5:            $font-size-base !default;
-$font-size-h6:            $font-size-base !default;
+$font-size-h1:            	floor(($font-size-base * 4.06)); // 65px
+$font-size-h2:            	floor(($font-size-base * 1.87)); // 30px
+$font-size-h3:            	ceil(($font-size-base * 1.25)); // 20px
+$font-size-h4:            	$font-size-base !default;
+$font-size-h5:            	$font-size-base !default;
+$font-size-h6:            	$font-size-base !default;
+$font-size-countup:			ceil(($font-size-base * 2.5)); // 40
 
 //** Unit-less `line-height` for use in components like buttons.
 $line-height-base:        1.42 !default; // 
