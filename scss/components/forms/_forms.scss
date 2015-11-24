@@ -8,10 +8,6 @@
 		margin-left: 1%;
 		&:first-of-type 	{margin-left: 0;}
 		&:last-of-type 		{margin-right: 0;}
-/* 		@include xs-down {
-			width: 100%;
-			margin: 8px 0;
-		} */
 		@media (max-width: $grid-float-breakpoint) {
 			width: 100%;
 			margin: 8px 0;
@@ -27,13 +23,38 @@
 
 .form-control {
 	border-radius: 2px;
-	border: 1px solid #c8c8c8;
+	background-color: transparent;
+	border: 1px solid $white;
 	display: block;
 	margin: 15px 0;
 	padding: 5px;
 	width: 100%;
+	&:hover,
 	&:focus,
 	&:active {
 		outline: none;
+		&::-webkit-input-placeholder {opacity: 0;}
+		&::-moz-placeholder          {opacity: 0;}/* Firefox 19+ */
+		&:-moz-placeholder           {opacity: 0;}/* Firefox 18- */
+		&:-ms-input-placeholder      {opacity: 0;}
 	}
+	&::-webkit-input-placeholder {
+		font-size: 15px;
+		color: #fff;
+	}
+	&::-moz-placeholder          {
+		font-size: 15px;
+		color: #fff;
+		}/* Firefox 19+ */
+	&:-moz-placeholder           {
+		font-size: 15px;
+		color: #fff;
+		}/* Firefox 18- */
+	&:-ms-input-placeholder      {
+		font-size: 15px;
+		color: #fff;
+	}
+}
+.form-center {
+	text-align: center;
 }

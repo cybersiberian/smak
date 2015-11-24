@@ -1,0 +1,30 @@
+.countup-circle,
+.countup-circle-01,
+.countup-circle-02,
+.countup-circle-03 {
+  display: inline-block;
+  width: auto;
+  position: relative;
+  canvas {
+    @include rotate(-90deg);
+  }
+  &-data {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include translate(-50%, -50%);
+    color: $brand-primary;
+    font-size: $font-size-icons-md;
+  }
+  &-caption {
+    display: block;
+    font-size: $font-size-large;
+    font-family: 'Oswald-Regular';
+    color: $brand-primary;
+    padding-top: 25px;
+  }
+}
+
+.countup-center {
+  text-align: center;
+}
