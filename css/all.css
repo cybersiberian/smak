@@ -420,6 +420,7 @@ blockquote.pull-right .small:after {
 .btn:hover a,
 .btn:active a,
 .btn:focus a {
+  color: #ffe600;
   text-decoration: none;
 }
 
@@ -873,21 +874,13 @@ textarea {
 }
 
 a {
-<<<<<<< HEAD
-  color: #131316;
-=======
   color: #fff;
->>>>>>> faa02b18a9da01757a2f27edb4d9dcf7d96e9ea9
   text-decoration: none;
 }
 
 a:hover,
 a:focus {
-<<<<<<< HEAD
-  color: black;
-=======
   color: #ffe600;
->>>>>>> faa02b18a9da01757a2f27edb4d9dcf7d96e9ea9
   text-decoration: underline;
 }
 
@@ -1865,6 +1858,7 @@ header::after {
 .navbar-toggle:focus {
   background-color: #ffe600;
   -webkit-transition: background-color 0.5s;
+  -moz-transition: background-color 0.5s;
   transition: background-color 0.5s;
 }
 
@@ -1900,32 +1894,6 @@ header::after {
   line-height: 1.42;
 }
 
-<<<<<<< HEAD
-=======
-@media (max-width: 767px) {
-  .navbar-nav .open .dropdown-menu {
-    position: static;
-    float: none;
-    width: auto;
-    margin-top: 0;
-    background-color: transparent;
-    border: 0;
-    box-shadow: none;
-  }
-  .navbar-nav .open .dropdown-menu > li > a,
-  .navbar-nav .open .dropdown-menu .dropdown-header {
-    padding: 5px 15px 5px 25px;
-  }
-  .navbar-nav .open .dropdown-menu > li > a {
-    line-height: 1.42;
-  }
-  .navbar-nav .open .dropdown-menu > li > a:hover,
-  .navbar-nav .open .dropdown-menu > li > a:focus {
-    background-image: none;
-  }
-}
-
->>>>>>> 922b7206959ccf4788f3eca0ff9e70b2e763e7c3
 @media (min-width: 768px) {
   .navbar-nav {
     float: left;
@@ -2039,11 +2007,10 @@ tbody.collapse.in {
 .logo-last-letter {
   fill: #fff;
 }
-<<<<<<< HEAD
 
 .og-grid {
   list-style: none;
-  padding: 20px 0;
+  padding: 10px 0;
   margin: 0 auto;
   text-align: center;
   width: 100%;
@@ -2053,7 +2020,7 @@ tbody.collapse.in {
   display: inline-block;
   margin: 10px 5px 0 5px;
   vertical-align: top;
-  height: 250px;
+  height: 100%;
 }
 
 .og-grid li > a,
@@ -2092,16 +2059,16 @@ tbody.collapse.in {
 }
 
 .og-expander-inner {
-  padding: 5% 22%;
+  padding: 5% 25%;
   height: 100%;
   text-align: justify;
 }
 
 .og-close {
   position: absolute;
-  width: 14px;
-  height: 14px;
-  top: 10%;
+  width: 19px;
+  height: 19px;
+  top: 5%;
   right: 20%;
   cursor: pointer;
 }
@@ -2132,11 +2099,18 @@ tbody.collapse.in {
 
 .og-fullimg,
 .og-details {
-  width: 50%;
   float: left;
   height: 100%;
   overflow: hidden;
   position: relative;
+}
+
+.og-fullimg {
+  width: 60%;
+}
+
+.og-details {
+  width: 40%;
 }
 
 .og-details {
@@ -2163,9 +2137,9 @@ tbody.collapse.in {
   top: 50%;
   left: 50%;
   margin: -25px 0 0 -25px;
-  -webkit-animation: loader 0.5s infinite ease-in-out both;
-  -moz-animation: loader 0.5s infinite ease-in-out both;
-  animation: loader 0.5s infinite ease-in-out both;
+  -webkit-animation: loader 300ms infinite ease-in-out both;
+  -moz-animation: loader 300ms infinite ease-in-out both;
+  animation: loader 300ms infinite ease-in-out both;
 }
 
 @-webkit-keyframes loader {
@@ -2210,6 +2184,25 @@ tbody.collapse.in {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .og-expander-inner {
+    padding: 5% 5%;
+    height: 100%;
+    text-align: justify;
+  }
+  .og-expander-inner p {
+    font-size: 14px;
+  }
+  .og-close {
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    top: 5%;
+    right: 5%;
+    cursor: pointer;
+  }
+}
+
 @media screen and (max-width: 830px) {
   .og-expander h3 {
     font-size: 32px;
@@ -2231,8 +2224,6 @@ tbody.collapse.in {
     width: 100%;
   }
 }
-=======
-<<<<<<< HEAD
 
 .countup-content {
   padding: 60px 0;
@@ -2249,8 +2240,3 @@ tbody.collapse.in {
   display: block;
   text-align: center;
 }
-
-/*# sourceMappingURL=all.css.map */
-=======
->>>>>>> 922b7206959ccf4788f3eca0ff9e70b2e763e7c3
->>>>>>> faa02b18a9da01757a2f27edb4d9dcf7d96e9ea9
