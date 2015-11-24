@@ -363,8 +363,8 @@ blockquote.pull-right .small:after {
 }
 
 .icon-holder {
-  background: black;
   padding: 10px;
+  text-align: center;
 }
 
 .simple {
