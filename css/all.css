@@ -1753,9 +1753,8 @@ header::after {
 }
 
 .heading-wrapper {
-  background-color: #11343a;
-  padding: 290px 0;
   position: relative;
+  z-index: 1;
 }
 
 .heading-wrapper .square-bg, .heading-wrapper .owl-prev, .heading-wrapper .owl-next {
@@ -1768,10 +1767,27 @@ header::after {
   transform: translate(-50%, 0);
 }
 
+.heading-wrapper .banner-holder {
+  width: 100%;
+}
+
+.heading-wrapper .banner-holder img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
 .heading-content {
   background-color: #122a2f;
   text-align: center;
-  padding: 60px 0;
+  padding: 5% 0;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  top: 30%;
+  bottom: 30%;
+  left: 0%;
 }
 
 footer {
