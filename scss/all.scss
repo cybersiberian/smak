@@ -22,10 +22,12 @@
 @import 'components/navbar/navbar';
 @import 'components/navbar/logo';
 @import 'components/forms/forms';
-
-// gallery
-
-@import 'components/gallery/g-components';
 @import 'components/countup/countup';
 @import 'components/countup/countup-circle';
 
+// gallery
+@import 'components/gallery/g-components';
+@import 'components/owl/owl.carousel';
+
+//brand-slider
+@import 'components/brand-slider/brand-slide';
