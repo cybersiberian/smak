@@ -36,19 +36,19 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
 }
 
-h1 {
+h1, .h1 {
   font-size: 64px;
 }
 
-h2 {
+h2, .h2 {
   font-size: 29px;
 }
 
-h3 {
+h3, .h3 {
   font-size: 20px;
 }
 
-h4 {
+h4, .h4 {
   font-size: 16px;
   font-family: 'oswald-regular';
 }
@@ -87,8 +87,11 @@ p {
 p, a {
   font-size: 16px;
   font-family: 'oswald-light';
-  text-decoration: none;
   color: inherit;
+}
+
+a:hover, p:hover {
+  text-decoration: none;
 }
 
 .text-left {
@@ -121,6 +124,10 @@ p, a {
 
 .text-capitalize {
   text-transform: capitalize;
+}
+
+.text-bold {
+  font-family: 'oswald-bold';
 }
 
 .text-base {
@@ -365,6 +372,10 @@ blockquote.pull-right .small:after {
   border-radius: 0 !important;
 }
 
+.heading-wrapper .square-bg:hover {
+  border-color: #ffe600 !important;
+}
+
 .social, .social > a {
   color: #ffffff;
   border-color: #ffffff;
@@ -386,11 +397,17 @@ blockquote.pull-right .small:after {
 .simple:active {
   background: transparent;
   border-color: #ffe600;
+  -webkit-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .bordered:hover,
 .bordered:active {
   border: 2px solid #ffe600;
+  -webkit-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .filled {
@@ -405,6 +422,9 @@ blockquote.pull-right .small:after {
   background: transparent;
   border-color: #131316 !important;
   color: #ffe600 !important;
+  -webkit-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .btn {
@@ -423,6 +443,9 @@ blockquote.pull-right .small:after {
   border-color: #ffe600;
   color: #131316;
   outline: none;
+  -webkit-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .btn:hover a,
@@ -450,6 +473,10 @@ blockquote.pull-right .small:after {
 
 .btn-capital {
   text-transform: capitalize;
+}
+
+.heading-wrapper .btn a:hover {
+  color: #ffe600;
 }
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -2254,6 +2281,17 @@ tbody.collapse.in {
   height: 250px;
 }
 
+.og-grid li a:hover {
+  text-decoration: none;
+}
+
+.og-grid li a:hover .thumbnail {
+  border: 3px solid #ffe600;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
 .og-grid li > a,
 .og-grid li > a img {
   border: none;
@@ -2490,197 +2528,6 @@ ul.grid2 li {
   }
 }
 
-/* .og-grid {
-	list-style: none;
-	padding: 10px 0;
-	margin: 0 auto;
-	text-align: center;
-	width: 100%;
-}
-
-.og-grid li {
-	display: inline-block;
-	margin: 10px 5px 0 5px;
-	vertical-align: top;
-	height: 100%;
-}
-
-.og-grid li > a,
-.og-grid li > a img {
-	border: none;
-	outline: none;
-	display: block;
-	position: relative;
-}
-
-.og-grid li.og-expanded > a::after {
-	top: auto;
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
-	border-bottom-color: #ddd;
-	border-width: 15px;
-	left: 50%;
-	margin: -20px 0 0 -15px;
-	display: none;
-}
-
-.og-expander {
-	position: absolute;
-	background: #fff;
-	top: auto;
-	left: 0;
-	width: 100%;
-	margin-top: 10px;
-	text-align: left;
-	height: 0;
-	overflow: hidden;
-}
-
-.og-expander-inner {
-	padding: 5% 25%;
-    height: 100%;
-    text-align: justify;
-}
-
-.og-close {
-	position: absolute;
-	width: 19px;
-	height: 19px;
-	top: 5%;
-    right: 20%;
-	cursor: pointer;
-}
-
-.og-close::before,
-.og-close::after {
-	content: '';
-	position: absolute;
-	width: 100%;
-	top: 50%;
-	height: 1px;
-	background: $yellow;
-	-webkit-transform: rotate(45deg);
-	-moz-transform: rotate(45deg);
-	transform: rotate(45deg);
-}
-
-.og-close::after {
-	-webkit-transform: rotate(-45deg);
-	-moz-transform: rotate(-45deg);
-	transform: rotate(-45deg);
-}
-
-.og-close:hover::before,
-.og-close:hover::after {
-	background: #333;
-}
-
-.og-fullimg,
-.og-details {
-	float: left;
-	height: 100%;
-	overflow: hidden;
-	position: relative;
-}
-
-.og-fullimg{
-	width: 60%;
-}
-
-.og-details{
-	width: 40%;
-}
-
-.og-details {
-	padding: 1% 0 0 3%;
-}
-
-.og-fullimg {
-	text-align: center;
-}
-
-.og-fullimg img {
-	display: inline-block;
-	max-height: 100%;
-	max-width: 100%;
-}
-
-
-.og-loading {
-	width: 20px;
-	height: 20px;
-	border-radius: 50%;
-	background: #ddd;
-	box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ccc;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin: -25px 0 0 -25px;
-	-webkit-animation: loader 300ms infinite ease-in-out both;
-	-moz-animation: loader 300ms infinite ease-in-out both;
-	animation: loader 300ms infinite ease-in-out both;
-}
-
-@-webkit-keyframes loader {
-	0% { background: #ddd; }
-	33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
-	66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
-}
-
-@-moz-keyframes loader {
-	0% { background: #ddd; }
-	33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
-	66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
-}
-
-@keyframes loader {
-	0% { background: #ddd; }
-	33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
-	66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
-}
-
-
-
-@media screen and (max-width: 1200px) {
-	.og-expander-inner {
-	padding: 5% 5%;
-    height: 100%;
-    text-align: justify;
-    	p{
-    		font-size: 14px;
-    	}
-}
-
-.og-close {
-	position: absolute;
-	width: 19px;
-	height: 19px;
-	top: 5%;
-    right: 5%;
-	cursor: pointer;
-}
-}
-
-
-@media screen and (max-width: 830px) {
-
-	.og-expander h3 { font-size: 32px; }
-	.og-expander p { font-size: 13px; }
-	.og-expander a { font-size: 12px; }
-
-
-}
-
-@media screen and (max-width: 650px) {
-
-	.og-fullimg { display: none; }
-	.og-details { float: none; width: 100%; }
-	
-} */
 .thumbnail {
   text-transform: none;
   display: block;
@@ -2688,7 +2535,10 @@ ul.grid2 li {
   margin-bottom: 22px;
   line-height: 1.42;
   background-color: #fff;
-  border-bottom: 3px solid #707070;
+  border: 3px solid #707070;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  border-right-color: transparent;
   border-radius: none;
   -webkit-transition: border 0.2s ease-in-out;
   -moz-transition: border 0.2s ease-in-out;

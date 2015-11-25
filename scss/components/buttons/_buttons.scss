@@ -6,6 +6,7 @@
 	font-family: 'oswald-bold';
 	text-transform: uppercase;
 
+
 	&:hover,
 	&:active,
 	&:focus{
@@ -13,6 +14,7 @@
 		border-color: $yellow;
 		color: $darkest-blue;
 		outline: none;
+		@include transition(.2s ease-in-out);
 
 		a{
 			color: $yellow;
@@ -39,4 +41,13 @@
 
 .btn-capital{
 	text-transform: capitalize;
+}
+
+.heading-wrapper{
+	.btn a:hover{
+	
+			color: $yellow;
+			
+	}
+
 }
