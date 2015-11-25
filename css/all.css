@@ -372,7 +372,11 @@ blockquote.pull-right .small:after {
   border-radius: 0 !important;
 }
 
-.heading-wrapper .square-bg:hover, .heading-wrapper .owl-prev:hover, .heading-wrapper .owl-next:hover {
+.heading-wrapper .square-bg, .heading-wrapper .owl-prev, .heading-wrapper .owl-next, footer .square-bg, footer .owl-prev, footer .owl-next {
+  cursor: pointer;
+}
+
+.heading-wrapper .square-bg:hover, .heading-wrapper .owl-prev:hover, .heading-wrapper .owl-next:hover, footer .square-bg:hover, footer .owl-prev:hover, footer .owl-next:hover {
   border-color: #ffe600 !important;
 }
 

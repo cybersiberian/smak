@@ -156,8 +156,9 @@
 	border-radius: 0!important;
 }
 
-.heading-wrapper{
+.heading-wrapper, footer{
 	.square-bg{
+		cursor: pointer;
 		&:hover{
 			border-color: $yellow!important;
 
