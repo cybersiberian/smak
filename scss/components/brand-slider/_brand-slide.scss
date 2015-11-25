@@ -37,13 +37,21 @@
 }
 
 .owl-prev, .owl-next{
-	// @extend .icon;
-	// @extend .icon-small;
-	// @extend .icon-bg;
-	@extend .square-bg;
-	@extend .filled;
 	font-size: 16px;
 	line-height: 14px;
+	background: $yellow;
+	color: $white!important;
+	border: 2px solid transparent;
+	cursor: pointer;
+
+	&:hover,
+	&:active{
+		background: transparent;
+		border-color: $yellow!important;
+		color: $yellow!important;
+		@include transition(.2s ease-in-out);
+
+	}
 }
 .owl-item{
 	img{

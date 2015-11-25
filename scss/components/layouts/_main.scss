@@ -1,5 +1,6 @@
 .content-wrapper{
   padding: 45px 0;
+  position: relative;
 }
 
 .row{
@@ -22,12 +23,7 @@
 	// background-color: $blue-lighter;
 	position: relative;
 	z-index: 1;
-	.square-bg {
-		position: absolute;
-		bottom: 0;
-		left: 50%;
-		@include translate(-50%, 0)
-	}
+
 	.banner-holder{
 		width: 100%;
 
@@ -50,3 +46,23 @@
 	bottom: 30%;
 	left: 0%;
 }
+
+	.affix-btn{
+		position: absolute;
+		left: 50%;
+		@include translate(-50%, 0)
+	}
+
+	.banner-holder,footer{
+		.affix-btn{
+			bottom: 0;
+		}
+
+	}
+
+	.affix-hldr{
+		.affix-btn{
+			top: 0%;
+		}
+
+	}

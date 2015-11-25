@@ -368,15 +368,15 @@ blockquote.pull-right .small:after {
 }
 
 /* ICONS Square border*/
-.square-bg, .owl-prev, .owl-next {
+.square-bg {
   border-radius: 0 !important;
 }
 
-.heading-wrapper .square-bg, .heading-wrapper .owl-prev, .heading-wrapper .owl-next, footer .square-bg, footer .owl-prev, footer .owl-next {
+.heading-wrapper .square-bg, footer .square-bg {
   cursor: pointer;
 }
 
-.heading-wrapper .square-bg:hover, .heading-wrapper .owl-prev:hover, .heading-wrapper .owl-next:hover, footer .square-bg:hover, footer .owl-prev:hover, footer .owl-next:hover {
+.heading-wrapper .square-bg:hover, footer .square-bg:hover {
   border-color: #ffe600 !important;
 }
 
@@ -414,7 +414,7 @@ blockquote.pull-right .small:after {
   transition: 0.2s ease-in-out;
 }
 
-.filled, .owl-prev, .owl-next {
+.filled {
   background: #ffe600;
   border-radius: 50%;
   color: #ffffff !important;
@@ -422,8 +422,7 @@ blockquote.pull-right .small:after {
 }
 
 .filled:hover,
-.owl-prev:hover,
-.owl-next:hover, .filled:active, .owl-prev:active, .owl-next:active {
+.filled:active {
   background: transparent;
   border-color: #131316 !important;
   color: #ffe600 !important;
@@ -1734,6 +1733,7 @@ header::after {
 
 .content-wrapper {
   padding: 45px 0;
+  position: relative;
 }
 
 .row {
@@ -1755,16 +1755,6 @@ header::after {
 .heading-wrapper {
   position: relative;
   z-index: 1;
-}
-
-.heading-wrapper .square-bg, .heading-wrapper .owl-prev, .heading-wrapper .owl-next {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-  -ms-transform: translate(-50%, 0);
-  -o-transform: translate(-50%, 0);
-  transform: translate(-50%, 0);
 }
 
 .heading-wrapper .banner-holder {
@@ -1790,10 +1780,28 @@ header::after {
   left: 0%;
 }
 
+.affix-btn {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
+.banner-holder .affix-btn, footer .affix-btn {
+  bottom: 0;
+}
+
+.affix-hldr .affix-btn {
+  top: 0%;
+}
+
 footer {
   background-color: #131316;
   padding: 26px 0 0;
   text-align: center;
+  position: relative;
 }
 
 .copyright {
@@ -2854,6 +2862,22 @@ span.thumbnail.active {
 .owl-prev, .owl-next, .owl-next {
   font-size: 16px;
   line-height: 14px;
+  background: #ffe600;
+  color: #ffffff !important;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.owl-prev:hover,
+.owl-next:hover,
+.owl-prev:active, .owl-next:active, .owl-next:hover,
+.owl-next:active {
+  background: transparent;
+  border-color: #ffe600 !important;
+  color: #ffe600 !important;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .owl-item img {
