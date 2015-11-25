@@ -1,0 +1,39 @@
+
+
+.nav-tabs{
+	text-align: center;
+	margin-bottom: 65px;
+	border: none;
+	font-size: 0;
+	>li{
+		position: relative;
+		display: inline-block;
+		float: none;
+		>a{
+			font-size: 16px;
+			font-weight: 700;
+			color: $tabs-color;
+			padding: 5px 20px;
+		}
+		&:not(:last-child):after{
+			content: '';
+			position: absolute;
+			top: 15px;
+			right: 0;
+			width: 5px;
+			height: 5px;
+			background-color: $tabs-color-active;
+		}
+	}
+	> li.active{
+		>a{
+			border: none;
+			color: $tabs-color-active;
+		}
+	}
+	
+}
+
+.tab-text{
+	padding-top: 10%;
+}
