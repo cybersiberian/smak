@@ -47,7 +47,11 @@ textarea {
   line-height: inherit;
 }
 
-
+img{
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
 // Links
 
 a {

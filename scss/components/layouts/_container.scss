@@ -14,3 +14,19 @@
   background: $darker-blue;
 }
 
+.heading-wrapper {
+	background-color: $blue-lighter;
+	padding: 290px 0;
+	position: relative;
+	.square-bg {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		@include translate(-50%, 0)
+	}
+}
+.heading-content {
+	background-color: $blue-light;
+	text-align: center;
+	padding: 60px 0;
+}
