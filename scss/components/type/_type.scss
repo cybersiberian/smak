@@ -33,21 +33,21 @@ h1,h2,h3,h4,h5,h6{
     -webkit-font-smoothing: antialiased;
 }
 
-h1{
+h1, .h1{
   font-size: $font-size-h1;
 }
 
-h2{
+h2, .h2{
   font-size: $font-size-h2;
 
 }
 
 
-h3{
+h3, .h3{
   font-size: $font-size-h3;
 }
 
-h4{
+h4, .h4{
   font-size: $font-size-h4;
   font-family: 'oswald-regular';
 }
@@ -85,10 +85,14 @@ p {
 p,a{
   font-size: $font-size-base;
   font-family: 'oswald-light'; 
-  text-decoration: none;
   color: inherit;
 
 }
+
+a:hover,p:hover{
+  text-decoration: none;
+}
+
 // Alignment
 .text-left           { text-align: left; }
 .text-right          { text-align: right; }
@@ -100,7 +104,9 @@ p,a{
 .text-lowercase      { text-transform: lowercase; }
 .text-uppercase      { text-transform: uppercase; }
 .text-capitalize     { text-transform: capitalize; }
-
+.text-bold{
+  font-family: 'oswald-bold';
+}
 //text color classes
 .text-base{
   color: $darkest-blue;

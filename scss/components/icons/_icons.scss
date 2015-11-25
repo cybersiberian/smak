@@ -155,6 +155,15 @@
 .square-bg{
 	border-radius: 0!important;
 }
+
+.heading-wrapper{
+	.square-bg{
+		&:hover{
+			border-color: $yellow!important;
+
+		}
+	}
+}
 .social, .social>a{
 	color: $white;
 	border-color: $white;
@@ -182,6 +191,7 @@
 	&:active{
 		background: transparent;
 		border-color: $yellow ;
+		@include transition(.2s ease-in-out);
 	}
 }
 
@@ -190,6 +200,7 @@
 	&:active
 	{
 		border: 2px solid $yellow;
+		@include transition(.2s ease-in-out);
 	}
 }
 
@@ -204,6 +215,7 @@
 		background: transparent;
 		border-color: $darkest-blue!important;
 		color: $yellow!important;
+		@include transition(.2s ease-in-out);
 
 	}
 }
