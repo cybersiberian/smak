@@ -1,0 +1,23 @@
+.countup {
+	&-content {
+		padding: 60px 0;
+	}
+
+	&-item {
+		border: 1px solid $brand-primary;
+		padding: 35px 0;
+	}
+	&-caption,
+	&-quantity {
+		display: block;
+		text-align: center;
+		font-size: $font-size-countup;
+		font-family: 'Oswald-Bold'; 
+		color: $white;
+	}
+	&-caption {
+		color: $brand-primary;
+		font-size: $font-size-base;
+		font-family: 'Oswald-Regular';
+	}
+}

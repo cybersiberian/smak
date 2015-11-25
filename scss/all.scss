@@ -1,6 +1,10 @@
+@import 'variables';
+@import 'mixins';
+
+@import 'components/type/type';
+@import 'components/icons/icons';
+@import 'components/buttons/buttons';
 @import "bourbon/bourbon";
-@import "variables";
-@import "_mixins.scss";
 
 //grid
 @import 'core/normalize';
@@ -11,12 +15,17 @@
 
 //layouts
 @import 'components/layouts/header';
+@import 'components/layouts/container';
 
 // components
 @import 'components/navbar/nav';
 @import 'components/navbar/navbar';
 @import 'components/navbar/logo';
-@import 'components/brand-slider/_brand-slide.scss';
-@import 'components/text-slider/_carousel.scss';
-@import 'components/text-slider/_text-slider.scss';
-@import 'components/owl/owl.carousel.scss';
+@import 'components/forms/forms';
+
+// gallery
+
+@import 'components/gallery/g-components';
+@import 'components/countup/countup';
+@import 'components/countup/countup-circle';
+

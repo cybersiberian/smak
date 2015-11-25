@@ -1,6 +1,6 @@
 // base nav
 $nav-link-padding:      5px 10px;
-$nav-link-hover-bg:     #fafafa;
+$nav-link-hover-bg:     transparent;
 
 
 .nav {
@@ -17,6 +17,7 @@ $nav-link-hover-bg:     #fafafa;
       position: relative;
       display: block;
       padding: $nav-link-padding;
+      text-transform: uppercase;
       &:hover,
       &:focus {
         text-decoration: none;
@@ -24,7 +25,9 @@ $nav-link-hover-bg:     #fafafa;
       }
     }
   }
-
+  @media (max-width: $grid-float-breakpoint) {
+    text-align: center;
+  }
   /* Prevent IE8 from misplacing imgs */
   /* See https://github.com/h5bp/html5-boilerplate/issues/984#issuecomment-3985989 */
   > li > a > img {

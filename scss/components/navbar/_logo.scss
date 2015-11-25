@@ -8,4 +8,7 @@
 	&-last-letter {
 		fill: #fff;
 	}
+	@media (max-width: $grid-float-breakpoint) {
+		margin-left: 15px;
+	}
 }

@@ -1,0 +1,42 @@
+.btn {
+	display: inline-block;
+	padding: 0.5em 2em;
+	background: $yellow;
+	border: 2px solid $yellow;
+	font-family: 'oswald-bold';
+	text-transform: uppercase;
+
+	&:hover,
+	&:active,
+	&:focus{
+		background-color: transparent;
+		border-color: $yellow;
+		color: $darkest-blue;
+		outline: none;
+
+		a{
+			color: $yellow;
+			text-decoration: none;
+		}
+	}
+}
+
+.btn-xl{
+	font-size: $font-size-large;
+}
+
+.btn-md{
+	font-size: $font-size-small;
+}
+
+.btn-base{
+	color: $darkest-blue;
+}
+
+.btn-inverse{
+	color: $white;
+}
+
+.btn-capital{
+	text-transform: capitalize;
+}
