@@ -1,5 +1,6 @@
 @import "bourbon/bourbon";
 @import "variables";
+@import "_mixins.scss";
 
 //grid
 @import 'core/normalize';
@@ -15,3 +16,7 @@
 @import 'components/navbar/nav';
 @import 'components/navbar/navbar';
 @import 'components/navbar/logo';
+@import 'components/brand-slider/_brand-slide.scss';
+@import 'components/text-slider/_carousel.scss';
+@import 'components/text-slider/_text-slider.scss';
+@import 'components/owl/owl.carousel.scss';
