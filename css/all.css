@@ -1732,6 +1732,10 @@ header::after {
   padding: 45px 0;
 }
 
+.row {
+  padding: 1em 0;
+}
+
 .inverse-bg {
   background: #131316;
 }
@@ -2299,7 +2303,6 @@ tbody.collapse.in {
 
 .og-grid {
   list-style: none;
-  padding: 20px 0;
   margin: 0 auto;
   text-align: center;
   width: 100%;
