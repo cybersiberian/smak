@@ -2,19 +2,19 @@ jQuery(document).ready(function( $ ) {
 	$('.countup-quantity').counterUp({
 		delay: 10, // the delay time in ms
 		time: 1000 // the speed time in ms
-	});	
+	});
 });
 
 $('.countup-circle').circleProgress({
     value: 0.9,
     size: 144,
     fill: {
-    	color: "#ffe600",
+        color: "#ffe600",
     },
     emptyFill: "#fff",
     thickness: 5,
     animation: {
-    	duration: 3200,
+        duration: 3200,
     },
 
 }).on('circle-animation-progress', function(event, progress) {
