@@ -441,7 +441,7 @@ blockquote.pull-right .small:after {
 .btn:focus {
   background-color: transparent;
   border-color: #ffe600;
-  color: #131316;
+  color: #ffe600;
   outline: none;
   -webkit-transition: 0.2s ease-in-out;
   -o-transition: 0.2s ease-in-out;
@@ -473,10 +473,6 @@ blockquote.pull-right .small:after {
 
 .btn-capital {
   text-transform: capitalize;
-}
-
-.heading-wrapper .btn a:hover {
-  color: #ffe600;
 }
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */

@@ -12,7 +12,7 @@
 	&:focus{
 		background-color: transparent;
 		border-color: $yellow;
-		color: $darkest-blue;
+		color: $yellow;
 		outline: none;
 		@include transition(.2s ease-in-out);
 
@@ -41,13 +41,4 @@
 
 .btn-capital{
 	text-transform: capitalize;
-}
-
-.heading-wrapper{
-	.btn a:hover{
-	
-			color: $yellow;
-			
-	}
-
 }
