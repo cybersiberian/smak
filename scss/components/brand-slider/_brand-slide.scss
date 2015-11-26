@@ -39,7 +39,7 @@
 .owl-prev, .owl-next{
 	font-size: 16px;
 	line-height: 14px;
-	background: $yellow;
+	background: $brand-primary;
 	color: $white!important;
 	border: 2px solid transparent;
 	cursor: pointer;
@@ -47,8 +47,8 @@
 	&:hover,
 	&:active{
 		background: transparent;
-		border-color: $yellow!important;
-		color: $yellow!important;
+		border-color: $brand-primary!important;
+		color: $brand-primary!important;
 		@include transition(.2s ease-in-out);
 
 	}

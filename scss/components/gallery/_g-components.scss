@@ -15,7 +15,7 @@
 		text-decoration: none;
 
 		.thumbnail{
-			border: 3px solid $yellow;
+			border: 3px solid $brand-primary;
 			@include transition(.2s ease-in-out);
 		}
 	}
@@ -123,7 +123,7 @@ ul.grid2{
 	width: 100%;
 	top: 50%;
 	height: 1px;
-	background: $yellow;
+	background: $brand-primary;
 	-webkit-transform: rotate(45deg);
 	-moz-transform: rotate(45deg);
 	transform: rotate(45deg);

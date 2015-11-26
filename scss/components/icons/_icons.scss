@@ -104,7 +104,7 @@
 .icon{
 	display: inline-block;
 	padding: 0.8em;
-	color: $yellow;
+	color: $brand-primary;
 	border: 2px solid transparent;
 
 		.slim{
@@ -118,7 +118,7 @@
 	&:focus{
 
 		a{
-			color: $yellow!important;
+			color: $brand-primary!important;
 			text-decoration: none!important;
 		}
 
@@ -160,7 +160,7 @@
 	.square-bg{
 		cursor: pointer;
 		&:hover{
-			border-color: $yellow!important;
+			border-color: $brand-primary!important;
 
 		}
 	}
@@ -191,7 +191,7 @@
 	&:hover,
 	&:active{
 		background: transparent;
-		border-color: $yellow ;
+		border-color: $brand-primary ;
 		@include transition(.2s ease-in-out);
 	}
 }
@@ -200,13 +200,13 @@
 	&:hover,
 	&:active
 	{
-		border: 2px solid $yellow;
+		border: 2px solid $brand-primary;
 		@include transition(.2s ease-in-out);
 	}
 }
 
 .filled{
-	background: $yellow;
+	background: $brand-primary;
 	border-radius: 50%;
 	color: $white!important;
 	border: 2px solid transparent;
@@ -215,7 +215,7 @@
 	&:active{
 		background: transparent;
 		border-color: $darkest-blue!important;
-		color: $yellow!important;
+		color: $brand-primary!important;
 		@include transition(.2s ease-in-out);
 
 	}

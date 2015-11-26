@@ -6,6 +6,7 @@ $nav-link-hover-bg:     transparent;
 .nav {
   margin-bottom: 0;
   padding-left: 0; // Override default ul/ol
+  padding-top: 15px;
   list-style: none;
   @include clearfix;
 
