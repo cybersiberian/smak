@@ -1,4 +1,6 @@
-
+.form{
+	position: relative;
+}
 .form-control {
 	border-radius: 2px;
 	background-color: transparent;
@@ -42,4 +44,22 @@ textarea.form-control {
 }
 .form-center {
 	text-align: center;
+}
+
+.error{
+	color: #FB3A3A;
+}
+
+.message{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom:100%;
+	padding: $validation-padding-vertical 0;
+	background-color: $validation-bg;
+	text-align: center;
+	font-size: $validation-font-size;
+	color: $validation-color;
+	z-index: 20;
+	border-radius: $validation-border-radius;
 }
