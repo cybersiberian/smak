@@ -36,7 +36,10 @@ $('.owl-carousel').owlCarousel({
             //form validation rules
             $("#register-form").validate({
                 rules: {
-                    firstname: "required",
+                    firstname: {
+                        required: true,
+                        minlength: 5
+                    },
                     lastname: "required",
                     email: {
                         required: true,
@@ -49,7 +52,7 @@ $('.owl-carousel').owlCarousel({
                     agree: "required"
                 },
                 messages: {
-                    firstname: "Please enter your firstname",
+                    firstname: "Please enter your valid firstname",
                     lastname: "Please enter your lastname",
                     password: {
                         required: "Please provide a password",
