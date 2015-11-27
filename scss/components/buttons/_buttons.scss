@@ -1,11 +1,18 @@
 .btn {
 	display: inline-block;
 	padding: 0.5em 2em;
-	background: $brand-primary;
-	border: 2px solid $brand-primary;
 	font-family: 'oswald-bold';
 	text-transform: uppercase;
+	
 
+	margin-bottom: 0; // For input.btn
+	font-weight: $btn-font-weight;
+	text-align: center;
+	vertical-align: middle;
+	touch-action: manipulation;
+	cursor: pointer;
+	background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214 	border: 1px solid transparent;
+	white-space: nowrap;
 
 	&:hover,
 	&:active,
@@ -15,11 +22,6 @@
 		color: $brand-primary;
 		outline: none;
 		@include transition(.2s ease-in-out);
-
-		a{
-			color: $brand-primary;
-			text-decoration: none;
-		}
 	}
 }
 
@@ -41,4 +43,31 @@
 
 .btn-capital{
 	text-transform: capitalize;
+}
+
+.btn-primary{
+	@include button-variant($darkest-blue, $brand-primary, $brand-primary);
+	&:hover,
+	&:active,
+	&:focus{
+		background-color: transparent;
+		border-color: $brand-primary;
+		color: $brand-primary;
+		outline: none;
+		@include transition(.2s ease-in-out);
+	}
+}
+
+.btn-info{
+	
+	&:hover,
+	&:active,
+	&:focus{
+		background-color: transparent;
+		border-color: $color-inverse;
+		color: $color-inverse;
+		outline: none;
+		@include transition(.2s ease-in-out);
+	}
+	@include button-variant($color-inverse, $background-inverse, $border-inverse);
 }

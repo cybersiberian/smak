@@ -8,7 +8,7 @@
   background-color: $background;
   border-color: $border;
 
-  &:focus,
+  /* &:focus,
   &.focus {
     color: $color;
     background-color: darken($background, 10%);
@@ -51,7 +51,7 @@
       background-color: $background;
           border-color: $border;
     }
-  }
+  } */
 
   .badge {
     color: $background;
