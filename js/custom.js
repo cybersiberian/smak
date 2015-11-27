@@ -94,5 +94,97 @@ $(function($){
 		}
 	});
 
+	$(".owl-carousel-main").owlCarousel({
+		baseClass: ".owl-carousel-main",
+		slideSpeed : 300,
+		paginationSpeed : 400,
+		items: 1,
+		navigation : true,
+		navigationText: ["<<", ">>"],
+		dots: false
+
+		// "singleItem:true" is a shortcut for:
+		// items : 1, 
+		// itemsDesktop : false,
+		// itemsDesktopSmall : false,
+		// itemsTablet: false,
+		// itemsMobile : false
+
+	});
+
+
+	$('.owl-carousel-text').owlCarousel({
+	    baseClass: ".owl-carousel-text",
+	    loop:true,
+	    items: 1,
+	    dots: true,
+	    responsiveClass:true,
+	    navigation : true
+	});
+
+	$('.owl-carousel').owlCarousel({
+	    loop:true,
+	    margin:10,
+	    items: 5,
+	    nav: true,
+	    navText: ["<<", ">>"],
+	    dots: false,
+	    responsiveClass: true,
+	    navigation : true
+	});
+
 });
 
+//        validation
+
+
+
+(function($,W,D)
+{
+    var JQUERY4U = {};
+
+    JQUERY4U.UTIL =
+    {
+        setupFormValidation: function()
+        {
+            //form validation rules
+            $("#register-form").validate({
+                rules: {
+                    firstname: {
+                        required: true,
+                        minlength: 5
+                    },
+                    lastname: "required",
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    password: {
+                        required: true,
+                        minlength: 5
+                    },
+                    agree: "required"
+                },
+                messages: {
+                    firstname: "Please enter your valid firstname",
+                    lastname: "Please enter your lastname",
+                    password: {
+                        required: "Please provide a password",
+                        minlength: "Your password must be at least 5 characters long"
+                    },
+                    email: "Please enter a valid email address",
+                    agree: "Please accept our policy"
+                },
+                submitHandler: function(form) {
+                    form.submit();
+                }
+            });
+        }
+    }
+
+    //when the dom has loaded setup form validation rules
+    $(D).ready(function($) {
+        JQUERY4U.UTIL.setupFormValidation();
+    });
+
+})(jQuery, window, document);
