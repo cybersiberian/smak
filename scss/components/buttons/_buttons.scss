@@ -3,8 +3,6 @@
 	padding: 0.5em 2em;
 	font-family: 'oswald-bold';
 	text-transform: uppercase;
-	
-
 	margin-bottom: 0; // For input.btn
 	font-weight: $btn-font-weight;
 	text-align: center;
@@ -13,7 +11,7 @@
 	cursor: pointer;
 	background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214 	border: 1px solid transparent;
 	white-space: nowrap;
-
+	border: 1px solid transparent;
 	&:hover,
 	&:active,
 	&:focus{
@@ -64,8 +62,8 @@
 	&:active,
 	&:focus{
 		background-color: transparent;
-		border-color: $color-inverse;
-		color: $color-inverse;
+		border: 1px solid $color-inverse-dark;
+		color: $color-inverse-dark;
 		outline: none;
 		@include transition(.2s ease-in-out);
 	}
