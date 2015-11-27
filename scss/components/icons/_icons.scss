@@ -2,9 +2,9 @@
 	font-family: 'icomoon';
 	src:url('../fonts/icomoon/icomoon.eot');
 	src:url('../fonts/icomoon/icomoon.eot') format('embedded-opentype'),
-		url('../fonts/icomoon/icomoon.ttf') format('truetype'),
-		url('../fonts/icomoon/icomoon.woff') format('woff'),
-		url('../fonts/icomoon/icomoon.svg#icomoon') format('svg');
+	url('../fonts/icomoon/icomoon.ttf') format('truetype'),
+	url('../fonts/icomoon/icomoon.woff') format('woff'),
+	url('../fonts/icomoon/icomoon.svg#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -99,6 +99,12 @@
 	content: "\e918";
 }
 
+.circle{
+	border-radius: 50%;
+	width: 125px;
+	height: 125px;
+}
+
 /* ICONS BASIC */
 
 .icon{
@@ -107,7 +113,7 @@
 	color: $brand-primary;
 	border: 2px solid transparent;
 
-		.slim{
+	.slim{
 		padding: 0 4px;
 	}
 }
@@ -218,6 +224,18 @@
 		color: $brand-primary!important;
 		@include transition(.2s ease-in-out);
 
+	}
+	&-inverse{
+		background-color: transparent;
+		border-color: $brand-primary!important;
+		transition: all 0.3s;
+		&:hover{
+			background: $brand-primary;
+			border-color: $darkest-blue!important;
+			span{
+				color: $darkest-blue;
+			}
+		}
 	}
 }
 
