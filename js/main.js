@@ -1,20 +1,22 @@
+$('.owl-carousel-text').owlCarousel({
+    baseClass: ".owl-carousel-text",
+    loop:true,
+    items: 1,
+    dots: true,
+    responsiveClass:true
+});
+
 $('.owl-carousel').owlCarousel({
     loop:true,
     margin:10,
     items: 5,
     nav: true,
     navText: ["<<", ">>"],
-    responsiveClass:true
-})
-
-$('.owl-carousel').owlCarousel({
-    baseClass: "owl-quot",
-    loop:true,
-    items: 1,
-    nav: true,
-    navText: ["<<", ">>"],
+    dots: false,
     responsiveClass:true
 });
+
+
 
 
 
